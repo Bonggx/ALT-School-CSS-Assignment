@@ -1,0 +1,79 @@
+/* General Styling */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Container */
+.container {
+    display: grid;
+    gap: 10px;
+    padding: 50px;
+    max-width: 1000px;
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Top Section Layout */
+.intro-section {
+    background-color: lightskyblue;
+    padding: 40px 20px;
+    display: flex; /* Circle left, text right */
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    min-height: 250px;
+    border: 2px solid palevioletred;
+    border-radius: 15px;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Creates the circle */
+    border: 3px solid palevioletred;
+    object-fit: cover; /* Ensures image fits nicely */
+    object-position: center; /* Ensures image fits into circle */
+    
+}
+
+/* Bottom Grid Section */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.grid-box {
+    background-color: lightskyblue;
+    border: 2px solid palevioletred;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column; /* Fix stacking */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        margin: 0 auto; /* Center on mobile */
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr; /* Stack hobbies & aspirations */
+    }
+}
+
+/* Additional Styling */
+h1, h2 {
+    color: palevioletred;
+    
+}
